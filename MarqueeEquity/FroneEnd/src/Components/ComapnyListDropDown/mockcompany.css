@@ -1,0 +1,75 @@
+.wrapper__div {
+  margin-top: 50px;
+}
+.forms__div {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.formsControl__box {
+  width: 25%;
+  position: relative;
+}
+
+.forms__div .textbox__formControls {
+  padding: 12px 10px;
+  border-radius: 0;
+  letter-spacing: 1px;
+  font-size: 15px;
+  outline: none;
+  box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 11%);
+  border: none;
+  border-bottom: 1px solid grey;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.dropdown__Icon {
+  position: absolute;
+  top: 25%;
+  right: 0;
+}
+
+.Submit {
+  padding: 10px 20px;
+  background-color: purple;
+  border-radius: 5px;
+  border: none;
+  color: #ffff;
+  font-weight: 600;
+  margin-left: -30px;
+}
+
+.dropdown.menu {
+  /* position: absolute;
+  inset: auto auto 0px 0px;
+  transform: translate(0px, -40px);
+  width: 25%; */
+  position: absolute !important;
+  width: 25%;
+
+  /* position: absolute !important;
+    width: 25%; */
+    margin-top: -4%;
+}
+
+.dropdown-itemmain {
+  display: block;
+  width: 100%;
+  clear: both;
+  font-weight: 400;
+  color: #495057;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #ffffff;
+  border: 0;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  padding-top: 0;
+}

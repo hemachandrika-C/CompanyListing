@@ -1,0 +1,153 @@
+Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]: postgres
+Password for user postgres:
+psql (14.5)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# \l
+                                             List of databases
+       Name        |  Owner   | Encoding |      Collate       |       Ctype        |   Access privileges
+-------------------+----------+----------+--------------------+--------------------+-----------------------
+ companyname__list | postgres | UTF8     | English_India.1252 | English_India.1252 |
+ postgres          | postgres | UTF8     | English_India.1252 | English_India.1252 |
+ sai               | postgres | UTF8     | English_India.1252 | English_India.1252 |
+ students          | postgres | UTF8     | English_India.1252 | English_India.1252 |
+ template0         | postgres | UTF8     | English_India.1252 | English_India.1252 | =c/postgres          +
+                   |          |          |                    |                    | postgres=CTc/postgres
+ template1         | postgres | UTF8     | English_India.1252 | English_India.1252 | =c/postgres          +
+                   |          |          |                    |                    | postgres=CTc/postgres
+(6 rows)
+
+
+postgres=# \c sai
+You are now connected to database "sai" as user "postgres".
+sai=#
+sai=#
+sai=#
+sai=# \dt
+        List of relations
+ Schema | Name | Type  |  Owner
+--------+------+-------+----------
+ public | sai  | table | postgres
+(1 row)
+
+
+sai=# CREATE TABLE seletedCompany(ID SERIAL PRIMARY KEY,companyname VARCHAR(255),datecreatedat DATE);
+CREATE TABLE
+sai=#
+sai=#
+sai=#
+sai=# select * from sai;
+  id  |               companyname               | datecreatedat
+------+-----------------------------------------+---------------
+  390 | SolarInfrastructure                     | 1973-04-09
+  490 | DoctyHealthCareDomain                   | 2022-04-08
+ 2390 | zaubacorp Company                       | 2022-04-08
+ 1234 | A A TRAINING PRIVATE LIMITED            | 2022-04-08
+  524 | A & A ACCESSORIZE PRIVATE LIMITED       | 2022-04-08
+  924 | FLORYTALE PRIVATE LIMITED               | 2022-04-08
+  824 | ENTERPRISES PRIVATE LIMITED             | 2022-04-08
+  921 | PYROLYSIS PRIVATE LIMITED               | 2022-04-08
+  870 | CORP PRIVATE LIMITED                    | 2022-04-08
+  907 | TURNKEY SOLUTIONS INDIA PRIVATE LIMITED | 2022-04-08
+  120 | MA ASSETS LLP                           | 2022-04-08
+  720 | A.A.A PROPERTIES PRIVATE LIMITED        | 2022-04-08
+  650 | A A A RICELAND PRIVATE LIMITED          | 2022-04-08
+(13 rows)
+
+
+sai=# \dt
+             List of relations
+ Schema |      Name      | Type  |  Owner
+--------+----------------+-------+----------
+ public | sai            | table | postgres
+ public | seletedcompany | table | postgres
+(2 rows)
+
+
+sai=# select * from seletedcompany;
+ id  |          companyname           | datecreatedat
+-----+--------------------------------+---------------
+ 650 | A A A RICELAND PRIVATE LIMITED | 2022-04-08
+(1 row)
+
+
+sai=# select * from seletedcompany;
+ id  |          companyname           | datecreatedat
+-----+--------------------------------+---------------
+ 650 | A A A RICELAND PRIVATE LIMITED | 2022-04-08
+ 150 | S S S RICELAND PRIVATE LIMITED | 2022-04-08
+(2 rows)
+
+
+sai=#  select * from sai;
+  id  |               companyname               | datecreatedat
+------+-----------------------------------------+---------------
+  490 | DoctyHealthCareDomain                   | 2022-04-08
+ 2390 | zaubacorp Company                       | 2022-04-08
+ 1234 | A A TRAINING PRIVATE LIMITED            | 2022-04-08
+  524 | A & A ACCESSORIZE PRIVATE LIMITED       | 2022-04-08
+  924 | FLORYTALE PRIVATE LIMITED               | 2022-04-08
+  824 | ENTERPRISES PRIVATE LIMITED             | 2022-04-08
+  921 | PYROLYSIS PRIVATE LIMITED               | 2022-04-08
+  870 | CORP PRIVATE LIMITED                    | 2022-04-08
+  907 | TURNKEY SOLUTIONS INDIA PRIVATE LIMITED | 2022-04-08
+  120 | MA ASSETS LLP                           | 2022-04-08
+  720 | A.A.A PROPERTIES PRIVATE LIMITED        | 2022-04-08
+  650 | A A A RICELAND PRIVATE LIMITED          | 2022-04-08
+(12 rows)
+
+
+sai=#  select * from sai;
+  id  |                  companyname                  | datecreatedat
+------+-----------------------------------------------+---------------
+  490 | DoctyHealthCareDomain                         | 2022-04-08
+ 2390 | zaubacorp Company                             | 2022-04-08
+ 1234 | A A TRAINING PRIVATE LIMITED                  | 2022-04-08
+  524 | A & A ACCESSORIZE PRIVATE LIMITED             | 2022-04-08
+  924 | FLORYTALE PRIVATE LIMITED                     | 2022-04-08
+  824 | ENTERPRISES PRIVATE LIMITED                   | 2022-04-08
+  921 | PYROLYSIS PRIVATE LIMITED                     | 2022-04-08
+  870 | CORP PRIVATE LIMITED                          | 2022-04-08
+  907 | TURNKEY SOLUTIONS INDIA PRIVATE LIMITED       | 2022-04-08
+  120 | MA ASSETS LLP                                 | 2022-04-08
+  720 | A.A.A PROPERTIES PRIVATE LIMITED              | 2022-04-08
+  650 | A A A RICELAND PRIVATE LIMITED                | 2022-04-08
+  101 | M.M.M. FILMS AND TRAINING COMPANY LIMITED     | 2022-04-08
+  109 | FOREX TRAVELS AND CONSULTANCY PRIVATE LIMITED | 2022-04-08
+  809 | DREAMZ LLP                                    | 2022-04-08
+  800 | UDYOG LTD                                     | 2022-04-08
+(16 rows)
+
+
+sai=# select * from seletedcompany;
+  id  |            companyname            | datecreatedat
+------+-----------------------------------+---------------
+  650 | A A A RICELAND PRIVATE LIMITED    | 2022-04-08
+  150 | S S S RICELAND PRIVATE LIMITED    | 2022-04-08
+  850 | R R S PRIMARYLAND PRIVATE LIMITED | 2022-04-08
+  903 | GPS S IMARYLAND PRIVATE LIMITED   | 2022-04-08
+  921 | PYROLYSIS PRIVATE LIMITED         |
+ 1234 | A A TRAINING PRIVATE LIMITED      |
+(6 rows)
+
+
+sai=# select * from seletedcompany;
+  id  |            companyname            | datecreatedat
+------+-----------------------------------+---------------
+  650 | A A A RICELAND PRIVATE LIMITED    | 2022-04-08
+  150 | S S S RICELAND PRIVATE LIMITED    | 2022-04-08
+  850 | R R S PRIMARYLAND PRIVATE LIMITED | 2022-04-08
+  903 | GPS S IMARYLAND PRIVATE LIMITED   | 2022-04-08
+  921 | PYROLYSIS PRIVATE LIMITED         |
+ 1234 | A A TRAINING PRIVATE LIMITED      |
+  809 | DREAMZ LLP                        |
+(7 rows)
+
+
+sai=#

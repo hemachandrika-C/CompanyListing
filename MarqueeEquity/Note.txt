@@ -1,0 +1,3 @@
+//hi  sir facing small issue in routing
+//url changes when clicking but component not rendered..
+//otherwise all implemented as your suggestions thank you
